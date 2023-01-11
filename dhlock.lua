@@ -19,7 +19,7 @@
     Settings = {
         Kalslock = {
         Enabled = true,
-        Key = "e",
+        Key = "q",
         showdot = false,
         airshots = true,
         notifaction = false,
